@@ -163,4 +163,4 @@ Collecting more data in different tracks can generate even more robust driving b
 
 Modifying the CNN model (different batch size, different optimizor, more layers and preprocessing steps, etc) to yield lower loss, shorter training time and better performance.
 
-Modifying the drive.py file to generate different driving style using throttle, brakes, yaw, etc to add complexity and more human-like driver.
+Modifying the drive.py file to generate different driving attributes using throttle, brakes, yaw, etc to add complexity and imitate a more human-like driver.
