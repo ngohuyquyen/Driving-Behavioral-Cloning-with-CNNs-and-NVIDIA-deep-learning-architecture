@@ -33,7 +33,7 @@ python drive.py model.h5
 
 Switch on the simulator, choose appropriate screen resolution and graphic (recommend fastest for best performance)
 
-To record the video of the car running in simulator, where run1 is the directory of the images you will capture to make video (you can change to your liking directory)
+To record the video of the car running in simulator, where run1 is the directory of the images you will capture to make video (you can change to your desired directory)
 ```sh
 python drive.py model.h5 run1
 ```
