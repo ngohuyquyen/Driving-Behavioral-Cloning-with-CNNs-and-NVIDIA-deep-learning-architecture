@@ -86,32 +86,46 @@ Here is a visualization of the architecture
 
 [//]: # (Image References)
 
-<img src="model_architecure.JPG" width="400" alt="Model Architecture" />
+<img src="model_architecture.JPG" width="400" alt="Visualization" />
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded three laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+[//]: # (Image References)
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+<img src="data/IMG/center_2016_12_01_13_30_48_287.jpg" width="400" alt="Center Lane Driving" />
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer back to the center of the track without going off. These images show what a recovery looks like:
 
-Then I repeated this process on track two in order to get more data points.
+[//]: # (Image References)
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+<img src="left_2016_12_01_13_41_04_146.jpg" width="400" alt="Left side" />
+<img src="right_2016_12_01_13_38_55_096.jpg" width="400" alt="Right side" />
 
-![alt text][image6]
-![alt text][image7]
+To augment the data sat, I also flipped images and angles thinking that this would create more images for the network to learn. For example, here is an image that has then been flipped:
 
-Etc ....
+[//]: # (Image References)
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+<img src="left_flip.jpg" width="400" alt="Left flip" />
+<img src="right_flip.jpg" width="400" alt="Right flip" />
+
+After the collection process, I had almost 35000 data image. I then preprocessed this data by normalize the image pixel values between 0 and 1, and then crop the top 70 and bottom 25 pixels to omit unnecessary information.
+
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+### Result
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I got the training loss of around 0.005 and validation loss of around 0.01. Those values are very small and satisfied my expectations.
+
+Here is the [video](https://youtu.be/cEpgllobh8g) of the car driving in autonomous mode on the simulator. You can also see the project_video.mp4 in the repository.
+
+
+### Possible improvement
+
+Collecting more data in different tracks can generate even more robust driving behavior when training the model.
+Modifying the CNN model (different batch size, different optimizor, more layers and preprocessing steps, etc) to yield lower loss, shorter training time and better performance.
+Modifying the drive.py file to generate different driving style using throttle, brakes, yaw, etc to add complexity and more human-like driver.
