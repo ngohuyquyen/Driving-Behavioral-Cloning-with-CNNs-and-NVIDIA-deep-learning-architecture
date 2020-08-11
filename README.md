@@ -32,9 +32,9 @@ To run the self-driving mode, run
 python drive.py model.h5
 ```
 
-Run the simulator. The source code can be found here (https://github.com/udacity/self-driving-car-sim)
+Install the simulator. The source code can be found here (https://github.com/udacity/self-driving-car-sim)
 
-Switch on the simulator, choose appropriate screen resolution and graphic (recommend fastest for best performance).
+Run the simulator, choose appropriate screen resolution and graphic (recommend fastest for best performance).
 
 To record the video of the car running in simulator, where run1 is the directory of the images you will capture to make video (you can change to your desired directory)
 ```sh
