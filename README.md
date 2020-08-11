@@ -1,7 +1,6 @@
-# **Behavioral Cloning** 
+# **Driving Behavioral Cloning** 
 
-## Writeup
-
+## README
 ---
 
 **Behavioral Cloning Project**
