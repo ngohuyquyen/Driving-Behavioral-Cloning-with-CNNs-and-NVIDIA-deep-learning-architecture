@@ -18,6 +18,8 @@ The goals / steps of this project are the following:
 ---
 
 ### How to execute the code
+Download data at (https://drive.google.com/drive/folders/1V5ggqb43goRt2jv3TQ2vszPLLNzpuKB8?usp=sharing). Change the whole folder name to "data" and get rid of old data folder.
+
 Clone the whole repository and navigate the terminal to the project repository.
 
 (If you want to train the project again yourself) Execute the model.py file to train the model.
