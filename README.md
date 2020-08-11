@@ -17,6 +17,39 @@ The goals / steps of this project are the following:
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
+
+### How to execute the code
+Clone the whole repository and navigate the terminal to the project repository.
+
+(If you want to train the project again yourself) Execute the model.py file to train the model.
+```sh
+python model.py
+```
+
+To run the self-driving mode, run
+```sh
+python drive.py model.h5
+```
+
+Switch on the simulator, choose appropriate screen resolution and graphic (recommend fastest for best performance)
+
+To record the video of the car running in simulator, where run1 is the directory of the images you will capture to make video (you can change to your liking directory)
+```sh
+python drive.py model.h5 run1
+```
+
+Then output the video, run
+```sh
+python video.py run1
+```
+
+Optionally, you can specify the FPS (frames per second) with
+```sh
+python video.py run1 --fps 48
+```
+This will run at 48 FPS. The default FPS is 60.
+
+
 ### Files Submitted & Code Quality
 
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
@@ -127,5 +160,7 @@ Here is the [video](https://youtu.be/cEpgllobh8g) of the car driving in autonomo
 ### Possible improvement
 
 Collecting more data in different tracks can generate even more robust driving behavior when training the model.
+
 Modifying the CNN model (different batch size, different optimizor, more layers and preprocessing steps, etc) to yield lower loss, shorter training time and better performance.
+
 Modifying the drive.py file to generate different driving style using throttle, brakes, yaw, etc to add complexity and more human-like driver.
